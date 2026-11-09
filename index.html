@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        form {
+            background-color: white;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border-radius: 5px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            background-color: lightyellow;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        @media (max-width: 400px) {
+            form {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h2>Cadastro</h2>
+
+        Nome:
+        <input type="text" name="nome" required>
+
+        E-mail:
+        <input type="email" name="email" required>
+
+        Senha:
+        <input type="password" name="senha" required>
+
+        Data de nascimento:
+        <input type="date" name="nascimento">
+
+        Curso:
+        <select name="curso">
+            <option>Informática</option>
+            <option>Administração</option>
+            <option>Desenvolvimento de Sistemas</option>
+                <option>Engenharia Civil</option>
+                <option>Engenharia Mecânica</option>
+                <option>Engenharia Elétrica</option>
+                <option>Engenharia de software</option>
+          
+        </select>
+
+        Sexo:
+        <br>
+        <input type="radio" name="sexo"> Masculino
+        <input type="radio" name="sexo"> Feminino
+        <input type="radio" name="sexo"> Outro
+        <br><br>
+
+        Interesses:
+        <br>
+        <input type="checkbox"> Jogos
+        <input type="checkbox"> Tecnologia
+        <input type="checkbox"> Programação
+        <br><br>
+
+        Comentários:
+        <textarea name="comentarios"></textarea>
+
+        Upload de foto:
+        <input type="file" name="foto">
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+
+    </form>
+
+</body>
+</html>
